@@ -10,12 +10,12 @@ This project contains a Scrapy spider to scrape event information from StubHub.
 
 1. Navigate to the project directory:
     ```sh
-    cd /d:/Projects/task
+    cd /d:/desire/project/file/path
     ```
 
 2. Run the Scrapy spider:
     ```sh
-    scrapy crawl events
+    scrapy crawl events (name of the spider)
     ```
 
 3. The scraped data will be saved in JSON files named `op_json_1.json`, `op_json_2.json`, etc., each containing 5 events.
