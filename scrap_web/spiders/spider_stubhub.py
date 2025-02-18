@@ -1,5 +1,6 @@
 import scrapy
 import json
+import os
 
 
 class Stubhub(scrapy.Spider):
@@ -30,7 +31,8 @@ class Stubhub(scrapy.Spider):
         for i in range(0, len(event_list), 5):
             chunk = event_list[i:i+5]
             if len(chunk) >= 5:
-                file_name = f'op_json_{i//5 + 1}.json'
+                os.makedirs('scrap_data', exist_ok=True)
+                file_name = f'scrap_data/op_json_{i//5 + 1}.json'
                 with open(file_name, 'w') as json_file:
                     json.dump({"events": chunk}, json_file)
                 
